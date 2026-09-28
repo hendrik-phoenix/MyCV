@@ -1,0 +1,154 @@
+/** @format */
+
+body {
+  background-color: #070a0a;
+  font-family: Arial, sans-serif;
+  color: #f1f1f1;
+}
+
+/* Constrain the CV to a readable width and keep its sections aligned. */
+.cv-shell {
+  max-width: 1040px;
+}
+
+/* Give the name the strongest visual weight and keep the CV label secondary. */
+.page-heading {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #343434;
+}
+
+.cv-label {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.2rem 0.65rem;
+  background-color: blueviolet;
+  color: #050606;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #15d9eb;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+}
+
+.role-line {
+  margin: 0.5rem 0 0;
+  color: #c084fc;
+  font-size: 1rem;
+}
+
+h2 {
+  margin: 0 0 0.9rem;
+  color: #15d9eb;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+h3 {
+  margin: 0 0 0.6rem;
+  color: #15d9eb;
+  font-size: 1rem;
+}
+
+p {
+  color: #c084fc;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Keep the portrait proportional and centered in its narrower column. */
+.profile-column {
+  text-align: center;
+}
+
+.profile-picture {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: 480px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+/* Separate each information group with measured, consistent spacing. */
+.cv-section {
+  margin-bottom: 2rem;
+}
+
+.intro-section p,
+.interests-section p {
+  max-width: 68ch;
+  margin-bottom: 0;
+}
+
+/* Align each contact label with its linked detail in a compact list. */
+.contact-list {
+  margin: 0;
+  font-style: normal;
+}
+
+.contact-list p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin: 0;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #343434;
+}
+
+.contact-list strong {
+  min-width: 4rem;
+  color: #f1f1f1;
+}
+
+.contact-list a {
+  color: #c084fc;
+  overflow-wrap: anywhere;
+}
+
+.contact-list a:hover {
+  color: #15d9eb;
+}
+
+/* Keep technology and art skills grouped and easy to scan. */
+.skill-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #c084fc;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* Give interests a clear start after the profile and skill columns. */
+.interests-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #343434;
+}
+
+/* Let the portrait and content stack naturally on narrow screens. */
+@media (max-width: 767.98px) {
+  .cv-shell {
+    padding-top: 2rem !important;
+  }
+
+  .page-heading {
+    margin-bottom: 2rem !important;
+  }
+
+  .profile-picture {
+    width: min(100%, 360px);
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .profile-column {
+    margin-bottom: 0.5rem;
+  }
+}
